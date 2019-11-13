@@ -1,6 +1,7 @@
 package me.maxish0t.chatbot;
 
 import me.maxish0t.chatbot.frame.MainFrame;
+import me.maxish0t.chatbot.utilities.ChatbotLogger;
 import me.maxish0t.chatbot.utilities.Constants;
 
 import javax.imageio.ImageIO;
@@ -51,6 +52,7 @@ public class Chatbot {
             e.printStackTrace();
         }
         frm.setIconImage(myImg);
+        ChatbotLogger.setInfoMessage("Main Frame has been loaded successfully!");
     }
 
 }
