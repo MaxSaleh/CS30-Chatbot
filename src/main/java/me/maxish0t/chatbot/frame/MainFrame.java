@@ -5,7 +5,7 @@ import javax.swing.*;
 public class MainFrame extends JPanel {
 
     public MainFrame() {
-        
+
     }
 
 }

@@ -15,12 +15,6 @@ import java.nio.file.Paths;
 public class Chatbot {
 
     /**
-     * Frame width & height sizes.
-     */
-    public static final int displayWidth = 1600;
-    public static final int displayHeight = 900;
-
-    /**
      * Main method that gets ran.
      * @param args
      */
@@ -36,7 +30,7 @@ public class Chatbot {
         JFrame frm = new JFrame();
         frm.setTitle("Chatbot Program - " + Constants.VERSION);
         frm.setContentPane(mainPingPongGUI);
-        frm.setSize(displayWidth, displayHeight);
+        frm.setSize(Constants.displayWidth, Constants.displayHeight);
         frm.setResizable(false);
         frm.setVisible(true);
         frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
