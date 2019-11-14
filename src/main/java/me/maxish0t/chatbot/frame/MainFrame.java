@@ -42,25 +42,19 @@ public class MainFrame extends JPanel {
 
         // Checks if the text field has any text.
         RenderTextTypeBox.jTextField.getDocument().addDocumentListener(new DocumentListener() {
-            public void changedUpdate(DocumentEvent e) {
-                changed();
-            }
-            public void removeUpdate(DocumentEvent e) {
-                changed();
-            }
-            public void insertUpdate(DocumentEvent e) {
-                changed();
-            }
+            public void changedUpdate(DocumentEvent e) { changed(); }
+            public void removeUpdate(DocumentEvent e) { changed(); }
+            public void insertUpdate(DocumentEvent e) { changed(); }
 
             public void changed() {
                 if (RenderTextTypeBox.jTextField.getText().equals("Hello")) {
                     System.out.println("Hello back person!");
                     DrawText.drawText("Hello there person!", 100, 100, 30, Color.WHITE, g);
-                }
-                else {
+                } else if (RenderTextTypeBox.jTextField.getText().isEmpty()) {
+                    System.out.println("Text Field is empty!");
+                } else {
                     System.out.println("Text is currently being changed....");
                 }
-
             }
         });
     }
