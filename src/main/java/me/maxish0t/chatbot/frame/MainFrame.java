@@ -2,6 +2,7 @@ package me.maxish0t.chatbot.frame;
 
 import me.maxish0t.chatbot.draw.DrawText;
 import me.maxish0t.chatbot.draw.RenderTextTypeBox;
+import me.maxish0t.chatbot.utilities.Constants;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -11,6 +12,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainFrame extends JPanel {
+
+    RenderTextTypeBox renderTextTypeBox1 = new RenderTextTypeBox("Input Text", (Constants.displayWidth / 2) - (300 / 2), 10, 300, 30, Color.GREEN, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+        }
+    });
 
     /**
      * Main Frame Constructor.
@@ -32,12 +39,7 @@ public class MainFrame extends JPanel {
         DrawText.drawText("Test Message", 40, 40, 30, Color.WHITE, g);
 
         // Draws the Text Field
-        RenderTextTypeBox.renderTextField("Input Text", 100F, 50F, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
+        renderTextTypeBox1.renderTextField();
 
         // Checks if the text field has any text.
         RenderTextTypeBox.jTextField.getDocument().addDocumentListener(new DocumentListener() {
