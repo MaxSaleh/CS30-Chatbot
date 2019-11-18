@@ -2,7 +2,6 @@ package me.maxish0t.chatbot.frame;
 
 import me.maxish0t.chatbot.draw.DrawText;
 import me.maxish0t.chatbot.draw.RenderTextTypeBox;
-import me.maxish0t.chatbot.utilities.Constants;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
