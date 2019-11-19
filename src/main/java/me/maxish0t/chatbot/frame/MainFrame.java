@@ -19,6 +19,8 @@ public class MainFrame extends JPanel {
         }
     });
 
+    private boolean hasSaidHello = false;
+
     /**
      * Main Frame Constructor.
      */
@@ -50,7 +52,7 @@ public class MainFrame extends JPanel {
             public void changed() {
                 if (RenderTextTypeBox.jTextField.getText().equals("Hello")) {
                     System.out.println("Hello back person!");
-                    DrawText.drawText("Hello there person!", 100, 100, 30, Color.WHITE, g);
+                    hasSaidHello = true;
                 } else if (RenderTextTypeBox.jTextField.getText().isEmpty()) {
                     System.out.println("Text Field is empty!");
                 } else {
@@ -58,6 +60,11 @@ public class MainFrame extends JPanel {
                 }
             }
         });
+
+        if (hasSaidHello == true) {
+            DrawText.drawText("Hello there person!", 100, 100, 30, Color.WHITE, g);
+        }
+
     }
 
 }
