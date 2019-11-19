@@ -35,6 +35,7 @@ public class Chatbot {
         frm.setResizable(false);
         frm.setVisible(true);
         frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frm.setLocationRelativeTo(null);
 
         // Sets the Icon from the resources
         URL res = Chatbot.class.getClassLoader().getResource("icon.png");
