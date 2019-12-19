@@ -21,11 +21,12 @@ public class Chatbot {
      * @param args
      */
     public static void main(String[] args){
-        //getFrame();
+        getFrame();
 
         // Set program variables.
         String userInput, response;
-        String filename = "src\\main\\java\\me\\maxish0t\\chatbot\\responses.txt";
+        //String filename = "src\\main\\java\\me\\maxish0t\\chatbot\\responses.txt";
+        String filename = "src\\main\\resources\\responses.txt";
 
         int lines = TalkingBot.getLines(filename);
         String[] responsesArray = TalkingBot.getResponsesArray(filename, lines);

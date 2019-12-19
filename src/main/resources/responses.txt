@@ -7,3 +7,4 @@ How old are you? - I am a computer program which means I don't got an age!
 what is your name? - My name is ChatBot
 help - Enter input into the console and receive a response.
 bye - Goodbye!
+Poop - That's not nice!!
