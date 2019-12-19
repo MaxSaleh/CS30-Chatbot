@@ -1,0 +1,9 @@
+hello - Hi there! How are you?
+good - That's good to hear!
+family? - I don't have a family
+ok - Why so negative?
+no - Why so negative?
+How old are you? - I am a computer program which means I don't got an age!
+what is your name? - My name is ChatBot
+help - Enter input into the console and receive a response.
+bye - Goodbye!

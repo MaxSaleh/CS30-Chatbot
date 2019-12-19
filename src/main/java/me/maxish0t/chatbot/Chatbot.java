@@ -1,5 +1,6 @@
 package me.maxish0t.chatbot;
 
+import me.maxish0t.chatbot.console.TalkingBot;
 import me.maxish0t.chatbot.frame.MainFrame;
 import me.maxish0t.chatbot.utilities.ChatbotLogger;
 import me.maxish0t.chatbot.utilities.Constants;
@@ -20,7 +21,29 @@ public class Chatbot {
      * @param args
      */
     public static void main(String[] args){
-        getFrame();
+        //getFrame();
+
+        // Set program variables.
+        String userInput, response;
+        String filename = "src\\main\\java\\me\\maxish0t\\chatbot\\responses.txt";
+
+        int lines = TalkingBot.getLines(filename);
+        String[] responsesArray = TalkingBot.getResponsesArray(filename, lines);
+
+        // Display menu with startup message.
+        TalkingBot.displayMenu(true);
+
+        // ChatBot loop.
+        do {
+            userInput = TalkingBot.getUserInput();
+            response = TalkingBot.getResponse(responsesArray, userInput);
+
+            System.out.println(Constants.ANSI_RED + "Chatbot: " + response);
+
+            if(!userInput.equals("bye")) {
+                TalkingBot.displayMenu(false);
+            }
+        } while(!userInput.equals("bye"));
     }
 
     /**
