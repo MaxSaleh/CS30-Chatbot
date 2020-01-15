@@ -30,5 +30,7 @@ repositories {
 dependencies {
     compile "joda-time:joda-time:2.2"
     testCompile "junit:junit:4.12"
+    compile 'com.google.cloud:google-cloud-storage:1.102.0'
+    compile 'com.google.apis:google-api-services-speech:v1-rev20191115-1.30.3'
     compile fileTree(dir: 'libs', include: '*.jar')
 }

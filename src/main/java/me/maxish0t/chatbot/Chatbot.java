@@ -1,5 +1,6 @@
 package me.maxish0t.chatbot;
 
+import com.google.protobuf.ByteString;
 import me.maxish0t.chatbot.console.TalkingBot;
 import me.maxish0t.chatbot.frame.MainFrame;
 import me.maxish0t.chatbot.utilities.ChatbotLogger;
@@ -20,12 +21,11 @@ public class Chatbot {
      * Main method that gets ran.
      * @param args
      */
-    public static void main(String[] args){
-        getFrame();
+    public static void main(String[] args) {
+        //getFrame(); // TODO
 
         // Set program variables.
         String userInput, response;
-        //String filename = "src\\main\\java\\me\\maxish0t\\chatbot\\responses.txt";
         String filename = "src\\main\\resources\\responses.txt";
 
         int lines = TalkingBot.getLines(filename);
